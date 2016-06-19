@@ -1,5 +1,14 @@
 == README
 
+Experimenting with Rails routing constraints vs. redirecting in a controller action.
+
+Observations:
+
+1. The constraint class is initialized at startup
+2. The constraint `matches?` code is only executed when the constrained path is requested (the root of the app, /, in this case.)
+3. generating links on a page doesn't cause the constraint to be re-initialized or executed
+4. in Dev mode, editing the constraint code _will_ cause it to be re-initialized on the next request
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
